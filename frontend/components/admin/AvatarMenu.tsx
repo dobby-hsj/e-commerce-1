@@ -1,6 +1,7 @@
 'use client'
 
 import * as React from 'react';
+import IconButton from "@mui/material/IconButton";
 import Button from '@mui/material/Button';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Grow from '@mui/material/Grow';
@@ -52,7 +53,7 @@ export const AvatarMenu = () => {
   return (
     <Stack direction="row" spacing={2}>
       <div>
-        <Button
+        <IconButton
           ref={anchorRef}
           id="composition-button"
           aria-controls={open ? 'composition-menu' : undefined}
@@ -65,7 +66,7 @@ export const AvatarMenu = () => {
                 sx={{ width : 32, height : 32 }} 
                 alt="test" 
                 src='https://flowbite.com/docs/images/people/profile-picture-5.jpg'/> 
-        </Button>
+        </IconButton>
         <Popper
           open={open}
           anchorEl={anchorRef.current}
